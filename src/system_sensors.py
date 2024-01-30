@@ -85,11 +85,11 @@ def send_config_message(mqttClient):
                                 + f'"state_topic":"system-sensors/sensor/{devicename}/state",'
                                 + (f'"unit_of_measurement":"{attr["unit"]}",' if 'unit' in attr else '')
                                 + f'"value_template":"{{{{value_json.{sensor}}}}}",'
-                                + f'"object_id":"{devicename}_{attr["sensor_type"]}_{sensor}",'
+                                + f'"object_id":"{devicename}_{sensor}",'
                                 + f'"unique_id":"{devicename}_{attr["sensor_type"]}_{sensor}",'
                                 + f'"availability_topic":"system-sensors/sensor/{devicename}/availability",'
                                 + f'"device":{{"identifiers":["{devicename}_sensor"],'
-                                + f'"name":"{deviceNameDisplay} Sensors","model":"{deviceModel}", "manufacturer":"{deviceManufacturer}"}}'
+                                + f'"name":"{deviceNameDisplay}","model":"{deviceModel}", "manufacturer":"{deviceManufacturer}"}}'
                                 + (f',"icon":"mdi:{attr["icon"]}"' if 'icon' in attr else '')
                                 + (f',{attr["prop"].to_string(devicename)}' if 'prop' in attr else '')
                                 + f'}}'
