@@ -363,10 +363,10 @@ sensors = {
                  'icon': 'thermometer',
                  'sensor_type': 'sensor',
                  'function': get_temp},
-            'fan_speed':
+          'fan_speed':
                 {'name': 'Fan Speed',
                  'state_class': 'measurement',
-                 'unit': 'rpm',
+                 'unit': 'RPM',
                  'icon': 'fan',
                  'sensor_type': 'sensor',
                  'function': get_fan_speed},
